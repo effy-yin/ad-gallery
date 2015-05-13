@@ -1,0 +1,159 @@
+.ad-gallery {
+  width: 600px;
+}
+.ad-gallery, .ad-gallery * {
+  margin: 0;
+  padding: 0;
+}
+.ad-gallery .ad-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 400px;     
+    overflow: hidden;
+    margin-bottom: 10px;
+} 
+.ad-gallery .ad-image-wrapper .ad-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    z-index: 9;
+}
+.ad-gallery .ad-image-wrapper .ad-image a img {
+    border: 0;
+}
+.ad-gallery .ad-image-wrapper .ad-image .ad-image-description {
+    position: absolute;
+    left: 0;
+    bottom: 0;  
+    width: 100%;    
+    background: url("image/opa75.png");
+    padding: 7px;
+    color: #000;     
+    text-align: left;
+    z-index: 2;
+}
+.ad-gallery .ad-image-wrapper .ad-image .ad-image-description .ad-description-title {
+    display: block;
+}
+.ad-gallery .ad-image-wrapper .ad-loader {    
+    position: absolute;
+    left: 48%;    
+    top: 48%;
+    border: 1px solid #CCC;
+    z-index: 10;
+}
+.ad-gallery .ad-image-wrapper .ad-prev, 
+.ad-gallery .ad-image-wrapper .ad-next {
+    position: absolute;
+    top: 0;   
+    display: block;
+    width: 25%;
+    height: 100%;
+    background: url("image/trans.gif") no-repeat;
+    cursor: pointer;
+    z-index: 200;
+}
+.ad-gallery .ad-image-wrapper .ad-prev {
+    left: 0;
+}
+.ad-gallery .ad-image-wrapper .ad-next {
+    right: 0;
+}
+.ad-gallery .ad-image-wrapper .ad-prev .ad-prev-image, 
+.ad-gallery .ad-image-wrapper .ad-next .ad-next-image {  
+    position: absolute;    
+    top: 47%;         
+    width: 30px;
+    height: 30px;    
+    display: none;
+    z-index: 101;    
+}
+.ad-gallery .ad-image-wrapper .ad-prev .ad-prev-image {
+    left: 0;    
+    background: url("image/ad_prev.png") no-repeat; 
+}
+.ad-gallery .ad-image-wrapper .ad-next .ad-next-image {
+    right: 0;
+    background: url("image/ad_next.png") no-repeat;    
+}
+
+
+.ad-gallery .ad-controls {
+    height: 20px;
+}
+.ad-gallery .ad-info {
+    float: left;
+}
+.ad-gallery .ad-slideshow-controls {
+    float: right;
+}
+.ad-gallery .ad-slideshow-controls .ad-slideshow-start, 
+.ad-gallery .ad-slideshow-controls .ad-slideshow-stop {
+    padding-left: 5px;
+    cursor: pointer;
+}
+.ad-gallery .ad-slideshow-controls .ad-slideshow-countdown {
+    padding-left: 5px;
+    font-size: 0.9em;
+}
+.ad-gallery .ad-slideshow-running .ad-slideshow-start {    
+    font-style: italic;
+    cursor: default;
+}
+
+/* ad-nav */
+.ad-gallery .ad-nav {
+    position: relative;
+    width: 100%;
+}
+.ad-gallery .ad-forward, 
+.ad-gallery .ad-back { 
+    position: absolute;
+    top: 0;  
+    display: block;
+    width: 13px;
+    height: 100%;
+    _height: 100px; /* IE 6 doesn't like height: 100% */    
+    cursor: pointer;
+    z-index: 10;
+}
+.ad-gallery .ad-forward {
+    background: url("image/ad_scroll_forward.png") 0 22px no-repeat;
+    right: -20px;
+}
+.ad-gallery .ad-back {
+    background: url("image/ad_scroll_back.png") 0 22px no-repeat;
+    left: -20px;
+}
+
+.ad-gallery .ad-nav .ad-thumbs {
+    width: 100%;
+    overflow: hidden;
+}
+.ad-gallery .ad-thumbs .ad-thumb-list {
+    float: left;    /*******/
+    width: 9000px;  /*******/
+    list-style: none outside none;
+}
+.ad-gallery .ad-thumbs li {
+    float: left;
+    padding-right: 4px;
+}
+.ad-gallery .ad-thumbs li a {
+    display: block;
+}
+.ad-gallery .ad-thumbs li a img {
+    display: block;
+    border: 3px solid #ccc;
+}
+.ad-gallery .ad-thumbs li a.ad-active img {
+    border-color: #616161;
+}
+
+/* Can't do display none, since Opera won't load the images then */
+.ad-preloads {
+    position: absolute;
+    left: -9000px;    
+    top: -9000px; 
+}

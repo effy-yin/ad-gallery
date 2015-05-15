@@ -153,7 +153,11 @@ $(function() {
     $('img.image1').data('ad-title', 'Title through $.data');
     $('img.image4').data('ad-desc', 'This image is wider than the wrapper, so it has been scaled down');
     $('img.image5').data('ad-desc', 'This image is higher than the wrapper, so it has been scaled down');
-    var gallerys = $('#gallery').adGallery();
+    var gallerys = $('#gallery').adGallery({
+        width: 800,
+        height: 700,
+        scroll_jump: 0
+    });
     setTimeout(function() {
         gallerys[0].addImage("image/thumbs/t7.jpg", "image/7.jpg");
     }, 1000);
